@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-handwriting {
+    font-family: 'Dancing Script', cursive, sans-serif;
+  }
+  .font-caveat {
+    font-family: 'Caveat', cursive, sans-serif;
+  }
+  .font-body {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+}
+
+/* Custom romantic glow animations */
+@keyframes heartPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 10px rgba(255, 75, 114, 0.6));
+  }
+  50% {
+    transform: scale(1.08);
+    filter: drop-shadow(0 0 20px rgba(255, 75, 114, 0.9));
+  }
+}
+
+.animate-heart-pulse {
+  animation: heartPulse 2.2s infinite ease-in-out;
+}
+
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+}
+
+.animate-float-gentle {
+  animation: floatGentle 4s infinite ease-in-out;
+}
+
